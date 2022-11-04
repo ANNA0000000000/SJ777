@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>My LIFF App</title>
+</head>
+<body>
+    <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
+    <script>
+        async function main() {
+                                         // Liff ID
+            await liff.init({ liffId: "1657621311-n0P9GK6b" })
+            await liff.shareTargetPicker([
+                {
+                    type: "flex",
+                    // ข้อความก่อนกดอ่าน
+                    altText: "รับฟรี 50 กดรับด่วน ",
+                    contents: 
+                    // โค้ดจาก line bot designer
+                    {
+  "type": "bubble",
+  "hero": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://cdn.discordapp.com/attachments/1038037246135255070/1038100774867189790/free.jpg",
+            "size": "full"
+          }
+        ],
+        "borderColor": "#99ccff",
+        "borderWidth": "normal",
+        "cornerRadius": "lg"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://cdn.discordapp.com/attachments/1038037246135255070/1038051364930060288/222.png",
+            "size": "full",
+            "aspectRatio": "10.20:5.20"
+          }
+        ],
+        "margin": "md",
+        "borderWidth": "normal",
+        "cornerRadius": "lg"
+      },
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "image",
+                "url": "https://cdn.discordapp.com/attachments/1038037246135255070/1038054074924421170/Untitled-4.png",
+                "size": "full",
+                "aspectRatio": "3:1"
+              }
+            ],
+            "borderWidth": "normal",
+            "action": {
+              "type": "uri",
+              "label": "action",
+              "uri": "https://lin.ee/sFaPCKj"
+            }
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "image",
+                "url": "https://cdn.discordapp.com/attachments/1038037246135255070/1038054049884405790/5.png",
+                "size": "full",
+                "aspectRatio": "3:1"
+              }
+            ],
+            "action": {
+              "type": "uri",
+              "label": "action",
+              "uri": "https://lin.ee/sFaPCKj"
+            }
+          }
+        ],
+        "spacing": "sm"
+      }
+    ],
+    "background": {
+      "type": "linearGradient",
+      "angle": "0deg",
+      "startColor": "#000000",
+      "endColor": "#000000",
+      "centerColor": "#003333"
+    },
+    "paddingAll": "md"
+  }
+}
+                }
+            ])
+            liff.closeWindow()
+        }
+        main()
+    </script>
+</body>
+</html>
